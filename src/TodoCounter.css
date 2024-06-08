@@ -9,8 +9,23 @@
     background: linear-gradient(207.8deg, #1d1c20 16.69%, #920ef7 100%);
     font-size: 2.4rem;
     color: white;
+    
 }
 
 .TodoCounter span{
     font-weight: bold;
+}
+
+.felicidades{
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+    background: linear-gradient(207.8deg, #0b053c 16.69%,   rgba(2, 37, 235, 0.905) 100%);
+    font-size: 2.4rem;
+    color: white;
+    font-weight: bold;
+
 }
