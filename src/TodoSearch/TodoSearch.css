@@ -1,4 +1,6 @@
 .TodoSearch {
+    display: flex;
+    display: block;
     background: #F9FBFC;
     border-radius: 2px;
     border: 2px solid #202329;
@@ -9,7 +11,7 @@
     font-family: 'Montserrat';
     font-weight: 400;
     color: #1E1E1F;
-    margin: 25px 0px;
+    margin: 10px 0px;
     }
   
   .TodoSearch::placeholder {
