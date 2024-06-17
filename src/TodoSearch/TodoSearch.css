@@ -1,9 +1,14 @@
+.container-todosearch {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 .TodoSearch {
-    display: flex;
-    display: block;
     background: #F9FBFC;
-    border-radius: 2px;
-    border: 2px solid #202329;
     height: 64px;
     width:50%;
     font-size: 24px;
@@ -11,7 +16,8 @@
     font-family: 'Montserrat';
     font-weight: 400;
     color: #1E1E1F;
-    margin: 10px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 40px rgb(250, 58, 148); 
     }
   
   .TodoSearch::placeholder {
@@ -21,5 +27,31 @@
   }
   
   .TodoSearch:focus {
-    outline-color: #61DAFA;
+    outline-color:rgb(250, 58, 148);
   }
+
+/* 
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(207.8deg, #1d1c20 16.69%, #920ef7 100%);
+  border:none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 40px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  font-weight: bold;
+  color:rgb(204, 204, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  transform: rotate(0);
+  transition: .3s ease;
+}
+
+.TodoCreateButton:hover{
+  transform: rotate(224deg);
+} */

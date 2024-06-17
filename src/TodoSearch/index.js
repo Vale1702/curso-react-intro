@@ -9,6 +9,7 @@ function TodoSearch(){
   } = React.useContext(TodoContext)
 
     return(
+      <div className='container-todosearch'>
       <input placeholder="Ingresa una Tarea" 
       className="TodoSearch"
       value={(searchValue)}
@@ -16,6 +17,7 @@ function TodoSearch(){
         setSearchValue(event.target.value);
       }}
       />
+      </div>
     );
   }
 
