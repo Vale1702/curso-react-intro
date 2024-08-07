@@ -49,33 +49,50 @@ function App() {
                 error={error}//propiedad
                 loading={loading}//propiedad
                 searchedTodos={searchedTodos}//propiedad
+                totalTodos={totalTodos}
 
                 onError={() =><TodosError/>}//randerizamos el error
                 onLoading={()=><TodosLoading/>}//se muestra componende de loading
-                onEmtyTodos={()=> <EmptyTodos/>}// se randeriza EmtyTodos.
-                render={ todo =>(//Devuelve cada TODO
+                onEmptyTodos={()=> <EmptyTodos/>}// se randeriza EmtyTodos.
+                onEmptySearchResults={
+                  ()=> <p> No se encontraron resultados para: {searchValue} </p>// se randeriza EmtyTodos.
+                  }                
+                    render={ todo => (//Devuelve cada TODO
 
-                  <TodoItem 
-                  key={todo.text} 
-                  text={todo.text}
-                  completed={todo.completed}
-                  onComplete={() => todoComplete(todo.text)}
-                  onDelete={() => deleteTodo(todo.text)}
+                    <TodoItem 
+                    key={todo.text} 
+                    text={todo.text}
+                    completed={todo.completed}
+                    onComplete={() => todoComplete(todo.text)}
+                    onDelete={() => deleteTodo(todo.text)}
+                    />
+                  )}
                   />
-                )}
-                />
-             
+                  {/* {todo =>(//Devuelve cada TODO
+
+                    <TodoItem 
+                    key={todo.text} 
+                    text={todo.text}
+                    completed={todo.completed}
+                    onComplete={() => todoComplete(todo.text)}
+                    onDelete={() => deleteTodo(todo.text)}
+                    />
+                  )}
+                </TodoList> */}
+
           <TodoCreateButton setOpenModal={setOpenModal}/>
          
         {openModal && (<Modal>
           <TodoForm
           addTodo={addTodo}
           setOpenModal={setOpenModal}
-          /> 
-                  </Modal> )}
+          />            </Modal> )}
       </>
       );
   
 }
 
 export default App;
+
+
+
