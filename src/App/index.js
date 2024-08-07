@@ -54,7 +54,7 @@ function App() {
                 onLoading={()=><TodosLoading/>}//se muestra componende de loading
                 onEmtyTodos={()=> <EmptyTodos/>}// se randeriza EmtyTodos.
                 render={ todo =>(//Devuelve cada TODO
-                  
+
                   <TodoItem 
                   key={todo.text} 
                   text={todo.text}
@@ -64,28 +64,7 @@ function App() {
                   />
                 )}
                 />
-                
-                {/* <TodoList>
-
-
-                {loading && 
-                <>
-                <TodosLoading/>
-                <TodosLoading/>
-                </>}
-
-                {error && <TodosError/>}
-                {(!loading && searchedTodos.length === 0) && <EmptyTodos/>}
-                {searchedTodos.map(todo => (
-                    <TodoItem 
-                    key={todo.text} 
-                    text={todo.text}
-                    completed={todo.completed}
-                    onComplete={() => todoComplete(todo.text)}
-                    onDelete={() => deleteTodo(todo.text)}
-                    />
-                  ))}      
-            </TodoList> */}
+             
           <TodoCreateButton setOpenModal={setOpenModal}/>
          
         {openModal && (<Modal>

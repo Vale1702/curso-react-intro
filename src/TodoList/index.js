@@ -11,9 +11,9 @@ function TodoList(props){
         
         {props.searchedTodos.map(props.render)}
 
-      <ul className='TodoList'>
+        <ul className='TodoList'>
         {props.children}
-      </ul>
+        </ul>
       </section>
     );
   }
