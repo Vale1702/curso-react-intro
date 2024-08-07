@@ -39,16 +39,18 @@ function App() {
             <TodoCounter 
                 totalTodos={totalTodos}
                 completedTodos={completedTodos}
+                loading={loading}
             />
             <TodoSearch 
               searchValue= {searchValue}
               setSearchValue= {setSearchValue}
+              loading={loading}
             />
           </TodoHeader>
                 <TodoList 
-                error={error}//propiedad
-                loading={loading}//propiedad
-                searchedTodos={searchedTodos}//propiedad
+                error={error}//propiedad de error
+                loading={loading}//propiedad de carga 
+                searchedTodos={searchedTodos}//propiedad de busqueda
                 totalTodos={totalTodos}
 
                 onError={() =><TodosError/>}//randerizamos el error
@@ -57,7 +59,7 @@ function App() {
                 onEmptySearchResults={
                   ()=> <p> No se encontraron resultados para: {searchValue} </p>// se randeriza EmtyTodos.
                   }                
-                    render={ todo => (//Devuelve cada TODO
+                  render={ todo => (//Devuelve cada TODO
 
                     <TodoItem 
                     key={todo.text} 

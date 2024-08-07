@@ -1,7 +1,7 @@
 import './TodoList.css'
 
 function TodoList(props){
-  const renderFunc=props.children || props.render;
+  const renderFunc= props.children || props.render;
     return(
 
       <section className='TodoLists-container'>
