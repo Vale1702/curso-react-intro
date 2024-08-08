@@ -35,18 +35,16 @@ function App() {
 
     return (
       <>
-          <TodoHeader>
+          <TodoHeader loading={loading}>
             <TodoCounter 
                 totalTodos={totalTodos}
                 completedTodos={completedTodos}
-                loading={loading}
             />
             <TodoSearch 
               searchValue= {searchValue}
               setSearchValue= {setSearchValue}
-              loading={loading}
             />
-          </TodoHeader>
+          </TodoHeader >
                 <TodoList 
                 error={error}//propiedad de error
                 loading={loading}//propiedad de carga 
