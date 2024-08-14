@@ -1,0 +1,33 @@
+.Alert-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 90%;
+    background: linear-gradient(205.8deg, #1d1c20 16.69%, #920ef7 100%);
+    z-index: 1;
+}
+
+.Alert-container button{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #aa6bd9;
+}
+
+.Alert-container p{
+    width: 200px;
+    height: 28px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 55px;
+}
