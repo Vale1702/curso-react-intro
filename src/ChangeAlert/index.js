@@ -1,9 +1,10 @@
 import React from "react";
 import './ChangeAlert.css'
 import { TfiReload  } from "react-icons/tfi";
-import { withStorageListener } from "./withStorageListener";
+import { useStorageListener } from "./useStorageListener";
 
-function ChangeAlert({show, toggleShow}){
+function ChangeAlert({synchronize}){
+const {show, toggleShow} = useStorageListener(synchronize);
     if(show){
         return ( 
         <div className="Alert-container">
@@ -21,6 +22,5 @@ function ChangeAlert({show, toggleShow}){
 }
 
 
-const ChangeAlertWithStorageListener= withStorageListener(ChangeAlert)
 
-export{ ChangeAlertWithStorageListener};
+export{ ChangeAlert};
