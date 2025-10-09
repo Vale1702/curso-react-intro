@@ -7,7 +7,7 @@ function TodoCreateButton({setOpenModal}){
                     setOpenModal(state => !state);
                 }
         }
-        > +</button>
+        > + </button>
     );
   }
 

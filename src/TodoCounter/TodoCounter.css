@@ -2,11 +2,12 @@
     position: relative;
     width: 100%;
     min-width: 320px;
-    height: auto;
     text-align: center;
     background: linear-gradient(207.8deg, #1d1c20 16.69%, #920ef7 100%);
     font-size: 2.4rem;
-    color: white;    
+    color: white; 
+    align-items: center;
+    padding: 10px;
 }
 
 .TodoCounter span{
