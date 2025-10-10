@@ -1,43 +1,57 @@
-import React from 'react';
-import { useTodos } from './useTodos';
-import { TodoHeader} from '../TodoHeader'
-import { TodoCounter} from '../TodoCounter';
-import { TodoSearch} from '../TodoSearch';
-import { TodoList } from '../TodoList';
-import { TodoItem } from '../TodoItem';
-import { TodosError } from '../TodosError';
-import { TodosLoading } from '../TodosLoading';
-import { EmptyTodos } from '../EmptyTodos';
-import { TodoForm } from '../TodoForm';
-import { TodoCreateButton } from '../TodoCreateButton';
-import { Modal } from '../Modal';
-import { ChangeAlert } from '../ChangeAlert';
+import {HashRouter, Routes, Route } from 'react-router-dom';
+// import { useTodos } from './useTodos';
+// import { TodoHeader} from '../TodoHeader'
+// import { TodoCounter} from '../TodoCounter';
+// import { TodoSearch} from '../TodoSearch';
+// import { TodoList } from '../TodoList';
+// import { TodoItem } from '../TodoItem';
+// import { TodosError } from '../TodosError';
+// import { TodosLoading } from '../TodosLoading';
+// import { EmptyTodos } from '../EmptyTodos';
+// import { TodoForm } from '../TodoForm';
+// import { TodoCreateButton } from '../TodoCreateButton';
+// import { Modal } from '../Modal';
+// import { ChangeAlert } from '../ChangeAlert';
+import { HomePage } from './HomePage';
+import { BlogPage } from './BlogPage';
+import { ProfilePage } from './ProfilePage';
+import { Menu } from './Menu';
 
 
 function App() {
 
-  const {
-    loading,
-    error,
-    searchedTodos,
-    todoComplete,
-    deleteTodo,
-    openModal,
-    setOpenModal,
+  // const {
+  //   loading,
+  //   error,
+  //   searchedTodos,
+  //   todoComplete,
+  //   deleteTodo,
+  //   openModal,
+  //   setOpenModal,
 
-    completedTodos,
-    totalTodos,
+  //   completedTodos,
+  //   totalTodos,
 
-    searchValue,
-    setSearchValue,
+  //   searchValue,
+  //   setSearchValue,
 
-    addTodo,
+  //   addTodo,
 
-    synchronizeTodos,
-    } = useTodos();
+  //   synchronizeTodos,
+  //   } = useTodos();
 
     return (
       <>
+      <HashRouter>
+          <Menu />
+          <Routes>
+              <Route path='/' element={ <HomePage/> } />
+              <Route path='/blog' element={ <BlogPage/> } />
+              <Route path='/profile' element={ <ProfilePage/> } />
+              <Route path='*' element={ <p>No Found </p> } />
+          </Routes>
+      </HashRouter>
+{/* 
           <TodoHeader loading={loading}>
             <TodoCounter 
                 totalTodos={totalTodos}
@@ -71,17 +85,6 @@ function App() {
                     />
                   )}
                   />
-                  {/* {todo =>(//Devuelve cada TODO
-
-                    <TodoItem 
-                    key={todo.text} 
-                    text={todo.text}
-                    completed={todo.completed}
-                    onComplete={() => todoComplete(todo.text)}
-                    onDelete={() => deleteTodo(todo.text)}
-                    />
-                  )}
-                </TodoList> */}
 
           <TodoCreateButton setOpenModal={setOpenModal}/>
          
@@ -93,12 +96,10 @@ function App() {
           <ChangeAlert 
           synchronize={synchronizeTodos}
           />
-      </>
-      );
-  
+          ); */}
+          </>
+    )
+
 }
 
 export default App;
-
-
-

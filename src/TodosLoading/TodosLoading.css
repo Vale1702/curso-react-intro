@@ -9,6 +9,7 @@
   box-sizing: border-box;
   animation: shadowRolling 2s linear infinite;
 }
+
 .Loading-TodoItem {
     position: relative;
     justify-content: center;
