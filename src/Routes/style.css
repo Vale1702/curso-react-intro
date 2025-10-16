@@ -2,10 +2,12 @@ li{
     color: white;
     list-style: none;
     font-size: 2rem;
+    display: inline-block;
 }
 
 a{
     text-decoration: none;
+    margin: 10px;
 }
 
 h2{

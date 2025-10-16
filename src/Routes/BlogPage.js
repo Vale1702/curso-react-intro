@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 import './style.css'
 import {blogdata} from './blogdata'
 
@@ -7,9 +7,11 @@ function BlogPage(){
         <>
             <h1> Blog Page</h1>
 
+            <Outlet/>
+            
             <ul >
             {blogdata.map(post => (
-                <BlogLink post = {post}/>
+                <BlogLink ley={post.slug} post = {post}/>
             ))}
            </ul>
         </>
