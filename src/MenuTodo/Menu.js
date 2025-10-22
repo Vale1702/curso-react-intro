@@ -39,5 +39,15 @@ function Menu(){
         to: '/profile',
         text: 'Profile',
     });
+    routes.push({
+        id: 4,
+        to: '/login',
+        text: 'Login',
+    });
+    routes.push({
+        id: 5,
+        to: '/logout',
+        text: 'Logout',
+    });
 
 export {Menu};

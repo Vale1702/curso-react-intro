@@ -1,0 +1,21 @@
+.form-container{
+margin-top: 40px;
+box-shadow: 1px 1px 8px rgb(250, 58, 148);
+}
+
+.form-container input {
+    margin: 10px;
+}
+
+.button{
+width: 100px;
+height: 25px;
+cursor: pointer;
+font-size: 1.2rem;
+font-weight: 500;
+border-radius: 2px;
+border: none;
+font-family: 'Montserrat';
+background: linear-gradient(358deg, #080510 16.69% 16.69%, #8c03f4 100%);
+color: azure;
+}

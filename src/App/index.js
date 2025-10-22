@@ -1,49 +1,52 @@
 import {HashRouter, Routes, Route } from 'react-router-dom';
-import { useTodos } from './useTodos';
-import { TodoHeader} from '../TodoHeader'
-import { TodoCounter} from '../TodoCounter';
-import { TodoSearch} from '../TodoSearch';
-import { TodoList } from '../TodoList';
-import { TodoItem } from '../TodoItem';
-import { TodosError } from '../TodosError';
-import { TodosLoading } from '../TodosLoading';
-import { EmptyTodos } from '../EmptyTodos';
+// import { useTodos } from './useTodos';
+// import { TodoHeader} from '../TodoHeader'
+// import { TodoCounter} from '../TodoCounter';
+// import { TodoSearch} from '../TodoSearch';
+// import { TodoList } from '../TodoList';
+// import { TodoItem } from '../TodoItem';
+// import { TodosError } from '../TodosError';
+// import { TodosLoading } from '../TodosLoading';
+// import { EmptyTodos } from '../EmptyTodos';
+// import { TodoCreateButton } from '../TodoCreateButton';
+// import { Modal } from '../Modal';
+// import { ChangeAlert } from '../ChangeAlert';
 import { TodoForm } from '../TodoForm';
-import { TodoCreateButton } from '../TodoCreateButton';
-import { Modal } from '../Modal';
-import { ChangeAlert } from '../ChangeAlert';
 import { Menu } from '../MenuTodo/Menu';
 import { HomePage } from '../Routes/HomePage';
 import { BlogPage } from '../Routes/BlogPage';
 import { BlogPost } from '../Routes/BlogPost';
 import { ProfilePage } from '../Routes/ProfilePage';
-
+import { AuthProvider } from '../Auth/auth';
+import { LoginPage } from '../Auth/login';
+import { LogoutPage } from '../Auth/logout';
 
 function App() {
 
-  const {
-    loading,
-    error,
-    searchedTodos,
-    todoComplete,
-    deleteTodo,
-    openModal,
-    setOpenModal,
+  // const {
+  //   loading,
+  //   error,
+  //   searchedTodos,
+  //   todoComplete,
+  //   deleteTodo,
+  //   openModal,
+  //   setOpenModal,
 
-    completedTodos,
-    totalTodos,
+  //   completedTodos,
+  //   totalTodos,
 
-    searchValue,
-    setSearchValue,
+  //   searchValue,
+  //   setSearchValue,
 
-    addTodo,
+  //   addTodo,
 
-    synchronizeTodos,
-    } = useTodos();
+  //   synchronizeTodos,
+  //   } = useTodos();
 
     return (
       <>
       <HashRouter>
+        <AuthProvider>
           <Menu />
           <Routes>
               <Route path='/' element={ <HomePage/> } />
@@ -52,12 +55,15 @@ function App() {
                 <Route path='/blog/:slug' element={ <BlogPost/> } />
               </Route>
               
+              <Route path='/login' element={ <LoginPage/> } />
+              <Route path='/Logout' element={ <LogoutPage/> } />
               <Route path='/profile' element={ <ProfilePage/> } />
               <Route path='*' element={ <p>No Found </p> } />
           </Routes>
+        </AuthProvider>
       </HashRouter>
 
-          <TodoHeader loading={loading}>
+          {/* <TodoHeader loading={loading}>
             <TodoCounter 
                 totalTodos={totalTodos}
                 completedTodos={completedTodos}
@@ -100,7 +106,7 @@ function App() {
           />            </Modal> )}
           <ChangeAlert 
           synchronize={synchronizeTodos}
-          />
+          /> */}
           </>
     )
 
