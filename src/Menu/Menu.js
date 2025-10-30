@@ -10,19 +10,22 @@ function Menu(){
             <ul>
                 <h2>Navegación con  Route  </h2>
                     {routes.map( route =>{
+                        
                         if(route.publicOnly && auth.user) return null;
                         if(route.private && !auth.user) return null;
+
                         return (
                             <li key = {route.id}>
                             <NavLink
-                            style = {({ isActive }) =>({
-                                color: isActive ? 'red' : "white",
-                            })}
-                            to={route.to} 
+                                style = {({ isActive }) =>({
+                                    color: isActive ? 'red' : "white",
+                                })}
+                                to={route.to} 
                             >
                                 {route.text}
                             </NavLink>
-                        </li>)
+                            </li>
+                        )
                     } 
                 )}
             </ul>
@@ -47,7 +50,7 @@ function Menu(){
         id: 3,
         to: './todo',
         text: 'Todos',
-        private: false,
+        private: true,
     });
     routes.push({
         id: 4,

@@ -3,6 +3,7 @@ import { useAuth } from "../Auth/auth";
 
 function ProfilePage(){
     const auth = useAuth();
+   
     return(
         <>
         <h1>Perfil, </h1>

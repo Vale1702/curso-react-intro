@@ -1,4 +1,4 @@
- import { useTodos } from './useTodos';
+import { useTodos } from '../App/useTodos';
 import { TodoHeader} from '../TodoHeader'
 import { TodoCounter} from '../TodoCounter';
 import { TodoSearch} from '../TodoSearch';
@@ -12,78 +12,76 @@ import { Modal } from '../Modal';
 import { ChangeAlert } from '../ChangeAlert';
 import { TodoForm } from '../TodoForm';
 
- const {
-    loading,
-    error,
-    searchedTodos,
-    todoComplete,
-    deleteTodo,
-    openModal,
-    setOpenModal,
-
-    completedTodos,
-    totalTodos,
-
-    searchValue,
-    setSearchValue,
-
-    addTodo,
-
-    synchronizeTodos,
-    } = useTodos();
 
  function Todos(){
-    
-    return(
-        <>     
-     <TodoHeader loading={loading}>
-            <TodoCounter 
-                totalTodos={totalTodos}
-                completedTodos={completedTodos}
-            />
-            <TodoSearch 
-              searchValue= {searchValue}
-              setSearchValue= {setSearchValue}
-            />
+    const {
+      loading,
+      error,
+      searchedTodos,
+      todoComplete,
+      deleteTodo,
+      openModal,
+      setOpenModal,
 
-          </TodoHeader >
-                <TodoList 
-                error={error}//propiedad de error
-                loading={loading}//propiedad de carga 
-                searchedTodos={searchedTodos}//propiedad de busqueda
-                totalTodos={totalTodos}
-                
-                onError={() =><TodosError/>}//randerizamos el error
-                onLoading={()=><TodosLoading/>}//se muestra componende de loading
-                onEmptyTodos={()=> <EmptyTodos/>}// se randeriza EmtyTodos.
-                onEmptySearchResults={
-                  ()=> <p> No se encontraron resultados para: {searchValue} </p>// se randeriza EmtyTodos.
-                  }                
-                  render={ todo => (//Devuelve cada TODO
-                    
-                    <TodoItem 
-                    key={todo.text} 
-                    text={todo.text}
-                    completed={todo.completed}
-                    onComplete={() => todoComplete(todo.text)}
-                    onDelete={() => deleteTodo(todo.text)}
-                    />
-                )}
+      completedTodos,
+      totalTodos,
+
+      searchValue,
+      setSearchValue,
+
+      addTodo,
+
+      synchronizeTodos,
+    } = useTodos();
+
+    return(
+      <>     
+        <TodoHeader loading={loading}>
+                <TodoCounter 
+                    totalTodos={totalTodos}
+                    completedTodos={completedTodos}
                 />
-                  
-                  <TodoCreateButton setOpenModal={setOpenModal}/>
-                  
-                  {openModal && (<Modal>
-                        <TodoForm
-                        addTodo={addTodo}
-                        setOpenModal={setOpenModal}
-                        />            
-                        </Modal> 
-                    )}
-          <ChangeAlert 
-          synchronize={synchronizeTodos}
-          /> 
-</>
-)
+                <TodoSearch 
+                  searchValue= {searchValue}
+                  setSearchValue= {setSearchValue}
+                />
+
+              </TodoHeader >
+                    <TodoList 
+                        error={error}//propiedad de error
+                        loading={loading}//propiedad de carga 
+                        searchedTodos={searchedTodos}//propiedad de búsqueda
+                        totalTodos={totalTodos}
+                        
+                        onError={() =><TodosError/>}//rendering el error
+                        onLoading={()=><TodosLoading/>}//se muestra componente de loading
+                        onEmptyTodos={()=> <EmptyTodos/>}// se randeriza EmptyTodos.
+                        onEmptySearchResults={
+                          ()=> <p> No se encontraron resultados para: {searchValue} </p>// se randeriza EmptyTodos.
+                          }                
+                          render={ todo => (//Devuelve cada TODO
+                              <TodoItem 
+                              key={todo.text} 
+                              text={todo.text}
+                              completed={todo.completed}
+                              onComplete={() => todoComplete(todo.text)}
+                              onDelete={() => deleteTodo(todo.text)}
+                              />
+                          )}
+                    />
+                      
+                    <TodoCreateButton setOpenModal={setOpenModal}/>
+                      {openModal && (<Modal>
+                            <TodoForm
+                              addTodo={addTodo}
+                              setOpenModal={setOpenModal}
+                              />            
+                            </Modal> 
+                        )}
+              <ChangeAlert 
+              synchronize={synchronizeTodos}
+              /> 
+        </>
+    )
 }
 export {Todos};

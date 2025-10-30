@@ -25,7 +25,7 @@ function useLocalStorage(itemName, initialValue){
                 setError(true);
                 }
         },3000);
-    },[synchronizedItem]);
+    }, [synchronizedItem]);
     
     const saveItem = (newItem) => {
       localStorage.setItem(itemName, JSON.stringify(newItem));
@@ -46,14 +46,3 @@ function useLocalStorage(itemName, initialValue){
   }
 
   export {useLocalStorage};
-
-//  localStorage.removeItem('Todos_v1');
-//   const defaultTodos =[
-//     {text: 'Cortar cebolla', completed: true},
-//     {text: 'Tomar Curso', completed: true},
-//     {text: 'Llorar con la llorona', completed: true},
-//     {text: 'LALALALA', completed: false},
-//     {text: 'jasdfkajf', completed: false},
-//     {text: 'gryii', completed: false},
-//     ];
-//  localStorage.setItem('Todos_v1', JSON.stringify(defaultTodos));
