@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { userList } from "../Data/users";
 
 const AuthContext = React.createContext();
 
@@ -7,8 +8,14 @@ function AuthProvider ({children}){
     const navigate = useNavigate();
     const [user, setUser] = React.useState(null);
 
-    const login = ({username}) =>{
-        setUser({username});
+    const login = ({username, password}) =>{
+        const isUser = userList.find(u => u.username === username && u.password === password);
+        
+        if(!isUser){
+            alert("Usuario o contraseña incorrectos");
+            return;
+        }
+        setUser({username, isUser:true});
         navigate('/profile');
     };
     
