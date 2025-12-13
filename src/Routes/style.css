@@ -5,6 +5,11 @@ li{
     display: inline-block;
 }
 
+p{
+    font-size: large;
+    font-weight: 600;
+}
+
 a{
     text-decoration: none;
     text-align: center;
