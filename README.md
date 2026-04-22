@@ -1,50 +1,68 @@
-# Todo App
+# 📝 Todo App
 
-¡Bienvenido a la aplicación de Todos! Esta app te permite gestionar tus tareas de manera eficiente y organizada. 🚀
+Aplicación web desarrollada con React para gestionar tareas de manera sencilla e interactiva.
 
-## Demo
+🔗 **Demo:** https://vale1702.github.io/curso-react-intro/  
+💻 **Repositorio:** https://github.com/Vale1702/curso-react-intro
 
-Puedes probar la app en vivo aquí: [Todo App](https://vale1702.github.io/curso-react-intro/)
+---
 
-## Características
+## 🌟 Funcionalidades
 
-- **Agregar Tareas**: Añade nuevas tareas fácilmente.
-- **Marcar como Completado**: Haz clic en una tarea para marcarla como completada.
-- **Eliminar Tareas**: Borra tareas que ya no necesites.
-- **Interfaz Amigable**: Diseño intuitivo y fácil de usar.
+- ➕ Agregar nuevas tareas
+- ✅ Marcar tareas como completadas
+- ❌ Eliminar tareas
+- ⚛️ Manejo de estado con React Hooks
+- 🎯 Interfaz simple e intuitiva
 
-## Tecnologías Utilizadas
+---
 
-- **ReactJS**: Framework para construir la interfaz de usuario.
-- **CSS**: Para el diseño y estilos de la aplicación.
-- **GitHub Pages**: Para desplegar la app.
+## 🛠️ Tecnologías
 
-## Cómo Ejecutar el Proyecto Localmente
+- React
+- JavaScript
+- CSS
+- GitHub Pages (deploy)
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/vale1702/curso-react-intro.git
-   ```
-2. Accede al directorio del proyecto:
-   ```bash
+---
+
+## 📸 Vista previa
+
+![Todo App](./static/assets/todo-preview.png)
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+bash
+git clone https://github.com/Vale1702/curso-react-intro.git
+
+
+2 Entra al proyecto:
    cd curso-react-intro
-   ```
-3. Instala las dependencias:
-   ```bash
+
+3 Instala dependencias:
    npm install
-   ```
-4. Inicia el servidor de desarrollo:
-   ```bash
+
+4 Ejecuta la app:
    npm start
-   ```
 
-La app estará disponible en `http://localhost:3000`.
 
-## Autor
+   💡 Aprendizajes
 
-Creado con 💙 por [vale1702](https://github.com/vale1702).
+En este proyecto trabajé en:
 
-## Licencia
+- Uso de React y Hooks (useState)
+- Manejo de estado en aplicaciones
+- Componentización
+- Interacción con el usuario (eventos)
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-```
+🔧 Próximas mejoras
+💾 Persistencia de tareas con localStorage
+🎨 Mejora de diseño (UI)
+📱 Versión responsive
+👩‍💻 Autor
+
+Desarrollado por Valentina Llorente
