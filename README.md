@@ -1,6 +1,6 @@
 # 📝 Todo App
 
-Aplicación web desarrollada con React para gestionar tareas de manera sencilla e interactiva.
+Aplicación web desarrollada con React para gestionar tareas de manera sencilla, rápida e interactiva.
 
 🔗 **Demo:** https://vale1702.github.io/curso-react-intro/  
 💻 **Repositorio:** https://github.com/Vale1702/curso-react-intro
@@ -30,39 +30,31 @@ Aplicación web desarrollada con React para gestionar tareas de manera sencilla 
 
 ![Todo App](./static/assets/todo-preview.png)
 
+
 ---
 
 ## 🚀 Cómo ejecutar el proyecto
 
-1. Clona el repositorio:
-
-bash
+```bash
 git clone https://github.com/Vale1702/curso-react-intro.git
+cd curso-react-intro
+npm install
+npm start
+```
+--
 
-
-2 Entra al proyecto:
-   cd curso-react-intro
-
-3 Instala dependencias:
-   npm install
-
-4 Ejecuta la app:
-   npm start
-
-
-   💡 Aprendizajes
+## 💡 Aprendizajes
 
 En este proyecto trabajé en:
 
-- Uso de React y Hooks (useState)
+- Uso de React y Hooks (`useState`)
 - Manejo de estado en aplicaciones
 - Componentización
 - Interacción con el usuario (eventos)
 
-🔧 Próximas mejoras
-💾 Persistencia de tareas con localStorage
-🎨 Mejora de diseño (UI)
-📱 Versión responsive
-👩‍💻 Autor
 
-Desarrollado por Valentina Llorente
+## 🔧 Próximas mejoras
+
+- 💾 Persistencia de tareas con localStorage
+- 🎨 Mejora de diseño (UI)
+- 📱 Versión responsive
