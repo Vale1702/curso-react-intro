@@ -28,7 +28,7 @@ Aplicación web desarrollada con React para gestionar tareas de manera sencilla,
 
 ## 📸 Vista previa
 
-![Todo App](./static/assets/todo-app.png
+![Todo App](./static/assets/todo-app.png)
 
 ---
 
