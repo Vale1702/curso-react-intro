@@ -57,3 +57,4 @@ En este proyecto trabajé en:
 - 💾 Persistencia de tareas con localStorage
 - 🎨 Mejora de diseño (UI)
 - 📱 Versión responsive
+- 
